@@ -70,7 +70,7 @@ class ColabCode:
         for tunnel in active_tunnels:
             public_url = tunnel.public_url
             ngrok.disconnect(public_url)
-        url = ngrok.connect(addr=self.port, bind_tls=True, sub_domain=self.domain_name)
+        url = ngrok.connect(addr=self.port, bind_tls=True, subdomain=self.domain_name)
         if self._code:
             print(f"Code Server can be accessed on: {url}")
         else:
